@@ -10,7 +10,7 @@ export default class TitleBar extends Component {
     render() {
         return (
             <div className="title-bar">
-
+                {this.props.title}
             </div>
         );
     }

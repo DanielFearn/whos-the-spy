@@ -12,8 +12,8 @@ export default class App extends Component {
   render() {
     return (
       <div className="app-container">
-        <TitleBar />
-        <MenuBar />
+        <TitleBar appState={this.props.appState} title="SPYFALL" />
+        <MenuBar appState={this.props.appState} />
       </div>
     );
   }

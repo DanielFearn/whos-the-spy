@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import App from './App';
 import './app.css';
 
 export default class AppState extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            joined: true,
+        };
     }
 
     setAppState(newAppState){
@@ -14,12 +17,7 @@ export default class AppState extends Component {
     render() {
         return (
             <div className='AppState'>
-                {React.Children.map(this.props.children, child => {
-                    return React.cloneElement(child, {
-                        appState: this.state,
-                        setAppState: this.setAppState.bind(this)
-                    });
-                })}
+                <App appState={{get: this.state, set: this.setAppState.bind(this)}} />
             </div>
         );
     }
