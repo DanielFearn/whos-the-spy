@@ -7,6 +7,8 @@ export default class AppState extends Component {
         super(props);
         this.state = {
             joined: true,
+            card: 20,
+            locations: ['Race Track', 'Vineyard', 'Library', 'Retirement Home', 'Construction Site', 'Candy Factory', 'Coal Mine', 'Rock Concert', 'Wedding', 'Harbour Docks', 'Art Museum', 'Stadium', 'Cat Show', 'Jail', 'The U.N.', 'Subway', 'Cemetary', 'Jazz Club', 'Gas Station', 'Sightseeing Bus']
         };
     }
 

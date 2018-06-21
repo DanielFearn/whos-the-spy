@@ -16,8 +16,8 @@ body {
 .app-container {
   width: 100%;
   height: 100vh;
-  max-width: 350px;
-  max-height: 600px;
+  /*max-width: 350px;
+  max-height: 600px;*/
   margin: 0 auto;
   position: relative;
   background-color: #333;
@@ -36,6 +36,66 @@ body {
   line-height: 50px;
   text-align: center;
   font-style: italic;
+}
+
+.card-view {
+  width: calc(100% - 30px);
+  height: calc(100% - 410px);
+
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  background-color: red;
+}
+
+.card-title {
+  width: 100%;
+  height: 38px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-title strong {
+  font-size: 18px;
+}
+
+.location-list {
+  color: #bbb;
+  width: 100%;
+  height: 260px;
+  position: absolute;
+  left: 0;
+  bottom: 80px;
+}
+
+.location-list h6 {
+  color: #bbb;
+  font-size: 18px;
+  margin: 0;
+  padding-left: 15px;
+}
+
+.location-list ul {
+  width: 100%;
+  padding: 0;
+}
+
+.location-list li {
+  font-size: 15px;
+  width: calc(50% - 30.5px);
+  height: 19px;
+  padding: 2px 0 0 8px;
+  margin-bottom: 3px;
+  margin-left: 15px;
+  background-color: #444;
+  display: inline-block;
+  border-radius: 5px;
 }
 
 .menu-bar {
