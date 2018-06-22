@@ -11,13 +11,28 @@ export default class App extends Component {
     this.state = {};
   }
 
+  getView() {
+    switch(this.props.appState.get.view){
+      case 'join':
+        return (<div>join</div>);
+        break;
+      case 'card':
+        return ([
+          <Card appState={this.props.appState} />,
+          <LocationList appState={this.props.appState} />
+        ]);
+        break;
+      default:
+        return (<div>View Error</div>);
+    }
+  }
+
   render() {
     return (
       <div className="app-container">
         <TitleBar appState={this.props.appState} title="ODD ONE OUT" />
 
-        <Card appState={this.props.appState} />
-        <LocationList appState={this.props.appState} />
+        {this.getView()}
         <MenuBar appState={this.props.appState} />
       </div>
     );
